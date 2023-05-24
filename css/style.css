@@ -730,7 +730,7 @@ nav ul li a {
   padding-right: 44px;
 }
 .how-create__cards > div:nth-child(3) {
-  padding-right: 40px;
+  padding-right: 35px;
   margin-right: 20px;
 }
 .how-create__cards > div:nth-child(3) .how-create__cards-card-text {
@@ -743,7 +743,7 @@ nav ul li a {
   max-width: 309px;
 }
 .how-create__cards > div:nth-child(5) {
-  padding-right: 44px;
+  padding-right: 42px;
   margin-right: 20px;
 }
 .how-create__cards > div:nth-child(5) .how-create__cards-card-text {
@@ -756,7 +756,7 @@ nav ul li a {
   max-width: 530px;
 }
 .how-create__cards > div:nth-child(7) {
-  padding-right: 43px;
+  padding-right: 40px;
   margin-right: 20px;
 }
 .how-create__cards > div:nth-child(7) .how-create__cards-card-text {
@@ -928,7 +928,7 @@ nav ul li a {
 
 .discussion__wrapper {
   position: relative;
-  background: url(/img/discussion__bg.webp) no-repeat center;
+  background: url(../img/discussion__bg.webp) no-repeat center;
   background-size: cover;
   display: flex;
   flex-direction: column;
