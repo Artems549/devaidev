@@ -13,27 +13,59 @@
     <header>
         <div class="wrapper">
             <div class="header__wrapper">
-                <div class="header__logo">
-                    <img src="/img/header__logo.svg" alt="logo">
-                </div>
+                <a href="#!" class="header__logo">
+                    <img src="img/header__logo.svg" alt="logo">
+                </a>
                 <div class="header__nav">
-                    <nav>
+                    <nav id="nav">
+                        <div class="header__nav-adap">
+                            <a href="#!" class="header__nav-logo">
+                                <img src="img/header__logo-adapt.svg" alt="logo-adapt">
+                            </a>
+                            <div class="header__nav-close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
                         <ul>
-                            <li><a href="#!">О нас</a></li>
-                            <li><a href="#!">Проекты</a></li>
+                            <li><a href="#decision">О нас</a></li>
+                            <li><a href="#favorites">Проекты</a></li>
                             <li><a href="#all-works">Услуги</a></li>
-                            <li><a href="#!">Команда</a></li>
+                            <li><a href="#our-team">Команда</a></li>
                             <li><a href="#reviews">Отзывы</a></li>
                             <li><a href="#how-create">Процесс</a></li>
                             <li><a href="#discussion">Контакты</a></li>
                         </ul>
+                        <div class="header__nav-lang">
+                            <h5>Рус</h5>
+                            <h5>Eng</h5>
+                            <h5>Spa</h5>
+                        </div>
+                        <div class="header__nav-button">
+                            <button class="btn-white-main">Начать проект</button>
+                        </div>
                     </nav>
                     <div class="header__nav-right">
                         <a class="header__right-nav-world" href="">
                             <img src="img/header__ico-world.svg" alt="world">
                         </a>
+                        <div class="header__nav-right-lang">
+                            <button class="header__nav-right-lang-btn">🇷🇺 Русский</button>
+                            <button class="header__nav-right-lang-btn">🇬🇧 English</button>
+                            <button class="header__nav-right-lang-btn">🇪🇸 Spanish</button>
+                        </div>
                         <button class="header__right-nav-start-project button-blue">Начать проект</button>
                     </div>
+                    <div class="header__nav-menu">
+                        <div class="header__nav-menu-button">
+                            <button>Меню</button>
+                        </div>
+                        <div class="header__nav-menu-lines">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -43,7 +75,7 @@
             <div class="wrapper">
                 <dvi class="company-dev__wrapper">
                     <div class="company-dev__text">
-                        <h1>Компания веб-разработки, <span>которая говорит с заказчиками</span> на человеческом языке! </h1>
+                        <h1>Компания веб-разработк и,<span>говорящая с заказчиками</span> на человеческом языке </h1>
                     </div>
                     <div class="company-dev__change-color">
                         <div></div>
@@ -51,44 +83,53 @@
                         <div></div>
                         <div></div>
                     </div>
+                    <button class="header__right-nav-start-project-second button-blue">Начать проект</button>
                 </dvi>
             </div>
         </section>
-        <section class="decision">
+        <section class="decision" id="decision">
             <div class="wrapper">
                 <div class="decision__wrapper">
                     <div class="decision__cards">
-                        <div class="decision__cards-card item-1">
-                            <p>Уже вчера вам нужно было веб-приложение или сайт?</p>
-                            <p>Но вас останавливает прошлый неудачный опыт работы с разработчиками? </p>
+                        <div class="decision__cards-up">
+                            <div class="decision__cards-up-card">
+                                <h5>Уже вчера вам нужно было веб-приложение или сайт?</h5>
+                                <h5>Но вас останавливает прошлый неудачный опыт работы с разработчиками?</h5>
+                            </div>
+                            <div class="decision__cards-up-card">
+                                <img src="img/decision__cards-up-card(new).png" alt="decision">
+                            </div>
                         </div>
-                        <div class="decision__cards-card item-2">
-                            <img src="img/decision__cards-up-card.webp" alt="decision">
-                        </div>
-                        <div class="decision__cards-card item-3">
-                            <img src="img/decision__cards-down-left-card.png" alt="decision">
-                        </div>
-                        <div class="decision__cards-card item-4">
-                            <p>Решение есть:</p>
-                            <p>Наша компания — это люди из бизнеса, которые объединились с разработчиками и дизайнерами. Поэтому мы вас понимаем</p>
-                        </div>
-                        <div class="decision__cards-card item-5">
-                            <p>Выполняем работу ровно в срок </p>
-                        </div>
-                        <div class="decision__cards-card item-6">
-                            <p>Выполняем свои обязательства </p>
+                        <div class="decision__cards-down">
+                            <div class="decision__cards-down-left">
+                                <div class="decision__cards-down-left-card">
+                                    <img src="img/decision__cards-down-left-card(new).png" alt="decision">
+                                </div>
+                            </div>
+                            <div class="decision__cards-down-right">
+                                <div class="decision__cards-down-right-card">
+                                    <p>Решение есть:</p>
+                                    <h5>Наша компания — это люди из бизнеса, которые объединились с разработчиками и дизайнерами. Поэтому мы вас понимаем</h5>
+                                </div>
+                                <div class="decision__cards-down-right-card">
+                                    <h5>Выполняем работу ровно в срок </h5>
+                                </div>
+                                <div class="decision__cards-down-right-card">
+                                    <h5>Выполняем свои обязательства </h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="decision__text">
-                        <p>Мы так часто заказывали и сталкивались с тем,</p>
-                        <p>что разработчики не всегда умеют погружаться в бизнес-задачи, </p>
-                        <p>что решили стать</p>
-                        <p>переводчиками между бизнесом и веб-разработкой</p>
+                        <h3>Мы так часто заказывали и сталкивались с тем,</h3>
+                        <h3>что разработчики не всегда умеют погружаться в бизнес-задачи, </h3>
+                        <h3>что решили стать</h3>
+                        <h3>переводчиками между бизнесом и веб-разработкой</h3>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="favorites">
+        <section class="favorites" id="favorites">
             <div class="wrapper">
                 <div class="favorites__wrapper">
                     <h2>Избранные работы</h2>
@@ -98,7 +139,7 @@
                                 <img src="img/favorites__cards-card.webp">
                             </div>
                             <div class="favorites__cards-card-text">
-                                <p>Sweattery.fun</p>
+                                <h5>Sweattery.fun</h5>
                                 <p>Школа фуллстак-фрилансера</p>
                                 <p>Задача стояла создать такую продающую страницу, которая продавалы бы сама, а клиент считал денежки и не просил бы программистов что-то постоянно править и дорабатывать, потому что им нужно было вчера и очень качественно...</p>
                             </div>
@@ -112,7 +153,7 @@
                                 <img src="img/favorites__cards-card.webp">
                             </div>
                             <div class="favorites__cards-card-text">
-                                <p>Sweattery.fun</p>
+                                <h5>Sweattery.fun</h5>
                                 <p>Школа фуллстак-фрилансера</p>
                                 <p>Задача стояла создать такую продающую страницу, которая продавалы бы сама, а клиент считал денежки и не просил бы программистов что-то постоянно править и дорабатывать, потому что им нужно было вчера и очень качественно...</p>
                             </div>
@@ -126,7 +167,7 @@
                                 <img src="img/favorites__cards-card.webp">
                             </div>
                             <div class="favorites__cards-card-text">
-                                <p>Sweattery.fun</p>
+                                <h5>Sweattery.fun</h5>
                                 <p>Школа фуллстак-фрилансера</p>
                                 <p>Задача стояла создать такую продающую страницу, которая продавалы бы сама, а клиент считал денежки и не просил бы программистов что-то постоянно править и дорабатывать, потому что им нужно было вчера и очень качественно...</p>
                             </div>
@@ -140,7 +181,7 @@
                                 <img src="img/favorites__cards-card.webp">
                             </div>
                             <div class="favorites__cards-card-text">
-                                <p>Sweattery.fun</p>
+                                <h5>Sweattery.fun</h5>
                                 <p>Школа фуллстак-фрилансера</p>
                                 <p>Задача стояла создать такую продающую страницу, которая продавалы бы сама, а клиент считал денежки и не просил бы программистов что-то постоянно править и дорабатывать, потому что им нужно было вчера и очень качественно...</p>
                             </div>
@@ -154,7 +195,7 @@
                                 <img src="img/favorites__cards-card.webp">
                             </div>
                             <div class="favorites__cards-card-text">
-                                <p>Sweattery.fun</p>
+                                <h5>Sweattery.fun</h5>
                                 <p>Школа фуллстак-фрилансера</p>
                                 <p>Задача стояла создать такую продающую страницу, которая продавалы бы сама, а клиент считал денежки и не просил бы программистов что-то постоянно править и дорабатывать, потому что им нужно было вчера и очень качественно...</p>
                             </div>
@@ -168,7 +209,7 @@
                                 <img src="img/favorites__cards-card.webp">
                             </div>
                             <div class="favorites__cards-card-text">
-                                <p>Sweattery.fun</p>
+                                <h5>Sweattery.fun</h5>
                                 <p>Школа фуллстак-фрилансера</p>
                                 <p>Задача стояла создать такую продающую страницу, которая продавалы бы сама, а клиент считал денежки и не просил бы программистов что-то постоянно править и дорабатывать, потому что им нужно было вчера и очень качественно...</p>
                             </div>
@@ -186,12 +227,20 @@
                 <div class="all-works__wrapper">
                     <div class="all-works__title">
                         <h2>Все работы</h2>
-                        <p>Мы помогаем бизнесу решать задачи любой сложности</p>
+                        <h5>Мы помогаем бизнесу решать задачи любой сложности</h5>
                     </div>
                     <div class="all-works__category">
                         <button class="btn-blue-main all-works__category-view-btn">По видам работ</button>
                         <button class="btn-white-main all-works__category-tech-btn">По техническому</button>
-                        <div class="all-works__category-view">
+                        <div class="all-works__category-adapt">
+                            <button class="all-works__category-adapt-btn btn-blue-main">По видам работ</button>
+                            <ul class="all-works__category-adapt-items btn">
+                                <li class="all-works__category-adapt-items-item btn-white-main">По видам работ</li>
+                                <li class="all-works__category-adapt-items-item btn-white-main">По техническому</li>
+
+                            </ul>
+                        </div>
+                        <div class="all-works__category-view" id="all-works__category-view">
                             <button class="btn-blue-main">Лендинги</button>
                             <button class="btn-white-main">Корпоративные сайты</button>
                             <button class="btn-white-main">Интернет-магазины</button>
@@ -201,7 +250,7 @@
                             <button class="btn-white-main">Брендинг</button>
                             <button class="btn-white-main">Высоконагруженные веб-приложения</button>
                         </div>
-                        <div class="all-works__category-technical">
+                        <div class="all-works__category-technical" id="all-works__category-technical">
                             <button class="btn-white-main">SPA-приложения</button>
                             <button class="btn-white-main">Чистый код</button>
                             <button class="btn-white-main">Конструкторы (Tilda, etc)</button>
@@ -215,7 +264,7 @@
                                     <img src="img/all-works__slider-slide.webp" alt="slide">
                                 </div>
                                 <div class="all-works__slider-slide-text">
-                                    <p>Sweattery.fun</p>
+                                    <h5>Sweattery.fun</h5>
                                     <p>Школа фуллстак-фрилансера</p>
                                 </div>
                             </div>
@@ -224,7 +273,7 @@
                                     <img src="img/all-works__slider-slide.webp" alt="slide">
                                 </div>
                                 <div class="all-works__slider-slide-text">
-                                    <p>Sweattery.fun</p>
+                                    <h5>Sweattery.fun</h5>
                                     <p>Школа фуллстак-фрилансера</p>
                                 </div>
                             </div>
@@ -233,7 +282,7 @@
                                     <img src="img/all-works__slider-slide.webp" alt="slide">
                                 </div>
                                 <div class="all-works__slider-slide-text">
-                                    <p>Sweattery.fun</p>
+                                    <h5>Sweattery.fun</h5>
                                     <p>Школа фуллстак-фрилансера</p>
                                 </div>
                             </div>
@@ -242,7 +291,7 @@
                                     <img src="img/all-works__slider-slide.webp" alt="slide">
                                 </div>
                                 <div class="all-works__slider-slide-text">
-                                    <p>Sweattery.fun</p>
+                                    <h5>Sweattery.fun</h5>
                                     <p>Школа фуллстак-фрилансера</p>
                                 </div>
                             </div>
@@ -272,7 +321,7 @@
                 </div>
             </div>
         </section>
-        <section class="our-team">
+        <section class="our-team" id="our-team">
             <div class="wrapper">
                 <div class="our-team__wrapper">
                     <div class="our-team__title">
@@ -284,7 +333,7 @@
                                 <img src="img/our-team__cards-card-pic(dev1).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Павел Зотов</h4>
+                                <h5>Павел Зотов</h5>
                                 <p>Разработка</p>
                             </div>
                         </div>
@@ -293,7 +342,7 @@
                                 <img src="img/our-team__cards-card-pic(dev2).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Роберт Алгин</h4>
+                                <h5>Роберт Алгин</h5>
                                 <p>Разработка</p>
                             </div>
                         </div>
@@ -302,7 +351,7 @@
                                 <img src="img/our-team__cards-card-pic(dev1).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Артем</h4>
+                                <h5>Артем</h5>
                                 <p>Разработка</p>
                             </div>
                         </div>
@@ -311,7 +360,7 @@
                                 <img src="img/our-team__cards-card-pic(dev2).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Андрей Тищенко</h4>
+                                <h5>Андрей Тищенко</h5>
                                 <p>Разработка</p>
                             </div>
                         </div>
@@ -320,7 +369,7 @@
                                 <img src="img/our-team__cards-card-pic(dev2).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Виталий Беларусь</h4>
+                                <h5>Виталий Беларусь</h5>
                                 <p>Разработка</p>
                             </div>
                         </div>
@@ -329,7 +378,7 @@
                                 <img src="img/our-team__cards-card-pic(dev2).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Владислав Шилов</h4>
+                                <h5>Владислав Шилов</h5>
                                 <p>Разработка</p>
                             </div>
                         </div>
@@ -338,7 +387,7 @@
                                 <img src="img/our-team__cards-card-pic(dev3).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Янина Суховерхая</h4>
+                                <h5>Янина Суховерхая</h5>
                                 <p>Маркетинг</p>
                             </div>
                         </div>
@@ -347,7 +396,7 @@
                                 <img src="img/our-team__cards-card-pic(dev3).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Катерина Тихонова</h4>
+                                <h5>Катерина Тихонова</h5>
                                 <p>Маркетинг</p>
                             </div>
                         </div>
@@ -356,7 +405,7 @@
                                 <img src="img/our-team__cards-card-pic(dev3).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Яна</h4>
+                                <h5>Яна</h5>
                                 <p>Маркетинг</p>
                             </div>
                         </div>
@@ -365,7 +414,7 @@
                                 <img src="img/our-team__cards-card-pic(dev3).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Шуана Кадырова</h4>
+                                <h5>Шуана Кадырова</h5>
                                 <p>PR и копирайтинг</p>
                             </div>
                         </div>
@@ -374,7 +423,7 @@
                                 <img src="img/our-team__cards-card-pic(dev3).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Алиса Рахмиева</h4>
+                                <h5>Алиса Рахмиева</h5>
                                 <p>Управление, чат-боты</p>
                             </div>
                         </div>
@@ -383,7 +432,7 @@
                                 <img src="img/our-team__cards-card-pic(dev2).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Максим Азиев</h4>
+                                <h5>Максим Азиев</h5>
                                 <p>Управление</p>
                             </div>
                         </div>
@@ -392,7 +441,7 @@
                                 <img src="img/our-team__cards-card-pic(dev3).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Карина</h4>
+                                <h5>Карина</h5>
                                 <p>Дизайн</p>
                             </div>
                         </div>
@@ -401,14 +450,14 @@
                                 <img src="img/our-team__cards-card-pic(dev2).webp">
                             </div>
                             <div class="our-team__cards-card-text">
-                                <h4>Марсель Галеев</h4>
+                                <h5>Марсель Галеев</h5>
                                 <p>Арт-дирекшн</p>
                             </div>
                         </div>
                         <div class="our-team__cards-card-last">
-                            <p>наша</p>
-                            <p>команда</p>
-                            <p>наше все</p>
+                            <h3>наша</h3>
+                            <h3>команда</h3>
+                            <h3>наше все</h3>
                         </div>
                     </div>
                 </div>
@@ -428,8 +477,8 @@
                         <div class="owl-carousel owl-theme" id="owl-reviews">
                             <div class="reviews__slider-slide">
                                 <div class="reviews__slider-slide-text">
-                                    <p>Наш успех был бы невозможен без Dev-ai-dev. Ребята, вы установили эталон для партнеров-разработчиков.</p>
-                                    <p>Sweattery.fun</p>
+                                    <h5>Наш успех был бы невозможен без Dev-ai-dev. Ребята, вы установили эталон для партнеров-разработчиков.</h5>
+                                    <h5>Sweattery.fun</h5>
                                     <p>Школа фуллстак-фрилансера</p>
                                 </div>
                                 <div class="reviews__slider-slide-pic">
@@ -438,8 +487,8 @@
                             </div>
                             <div class="reviews__slider-slide">
                                 <div class="reviews__slider-slide-text">
-                                    <p>Мы не можем представить себе работу с кем-то еще.</p>
-                                    <p>Анастасия Успенская</p>
+                                    <h5>Мы не можем представить себе работу с кем-то еще.</h5>
+                                    <h5>Анастасия Успенская</h5>
                                     <p>Продюссерский центр</p>
                                 </div>
                                 <div class="reviews__slider-slide-pic">
@@ -448,8 +497,8 @@
                             </div>
                             <div class="reviews__slider-slide">
                                 <div class="reviews__slider-slide-text">
-                                    <p>То, что они предлагают, бесценно. Серьезно квалифицированные инженеры и удивительная поддержка.</p>
-                                    <p>Олег Владов</p>
+                                    <h5>То, что они предлагают, бесценно. Серьезно квалифицированные инженеры и удивительная поддержка.</h5>
+                                    <h5>Олег Владов</h5>
                                     <p>Клуб криптоинвесторов</p>
                                 </div>
                                 <div class="reviews__slider-slide-pic">
@@ -458,8 +507,8 @@
                             </div>
                             <div class="reviews__slider-slide">
                                 <div class="reviews__slider-slide-text">
-                                    <p>Вы лучшие!</p>
-                                    <p>Sweattery.fun</p>
+                                    <h5>Вы лучшие!</h5>
+                                    <h5>Sweattery.fun</h5>
                                     <p>Школа фуллстак-фрилансера</p>
                                 </div>
                                 <div class="reviews__slider-slide-pic">
@@ -487,8 +536,8 @@
                                 <h2>01</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Брифинг</h3>
-                                <p>Сначала мы вместе с вами определяем цели и задачи. И то, как именно они будут реализоваться. Заполняем вместе бриф и готовим смету.</p>
+                                <h4>Брифинг</h4>
+                                <h5>Сначала мы вместе с вами определяем цели и задачи. И то, как именно они будут реализоваться. Заполняем вместе бриф и готовим смету.</h5>
                             </div>
                         </div>
                         <div class="how-create__cards-card">
@@ -496,8 +545,8 @@
                                 <h2>02</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Исследование</h3>
-                                <p>Изучаем и создаем портрет вашей целевой аудитории и ее поведенческие паттерны. Если нужно, проводим UX-исследование</p>
+                                <h4>Исследование</h4>
+                                <h5>Изучаем и создаем портрет вашей целевой аудитории и ее поведенческие паттерны. Если нужно, проводим UX-исследование</h5>
                             </div>
                         </div>
                         <div class="how-create__cards-card">
@@ -505,8 +554,8 @@
                                 <h2>03</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Техническое задание</h3>
-                                <p>Утверждаем техническое задание, в котором пропишем всё. Буквально всё — от цветовой палитры веб-приложения и UI/UX до каждой технической детали в каждой кнопке, форме и действии юзеров</p>
+                                <h4>Техническое задание</h4>
+                                <h5>Утверждаем техническое задание, в котором пропишем всё. Буквально всё — от цветовой палитры веб-приложения и UI/UX до каждой технической детали в каждой кнопке, форме и действии юзеров</h5>
                             </div>
                         </div>
                         <div class="how-create__cards-card">
@@ -514,8 +563,8 @@
                                 <h2>04</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Дизайн</h3>
-                                <p>Создаём наглядный кликабельный прототип и отрисовываем финальные макеты. Утверждаем дизайн.</p>
+                                <h4>Дизайн</h4>
+                                <h5>Создаём наглядный кликабельный прототип и отрисовываем финальные макеты. Утверждаем дизайн.</h5>
                             </div>
                         </div>
                         <div class="how-create__cards-card">
@@ -523,8 +572,8 @@
                                 <h2>05</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Разработка</h3>
-                                <p>Приступаем к работе с кодом: верстаем и программируем.</p>
+                                <h4>Разработка</h4>
+                                <h5>Приступаем к работе с кодом: верстаем и программируем.</h5>
                             </div>
                         </div>
                         <div class="how-create__cards-card">
@@ -532,8 +581,8 @@
                                 <h2>06</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Тестирование</h3>
-                                <p>Сдаем проект, согласуем  детали и подписываем акт-приемки передачи.</p>
+                                <h4>Тестирование</h4>
+                                <h5>Сдаем проект, согласуем  детали и подписываем акт-приемки передачи.</h5>
                             </div>
                         </div>
                         <div class="how-create__cards-card">
@@ -541,8 +590,8 @@
                                 <h2>07</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Сдача</h3>
-                                <p>Радуемся тому, как ваш проект приносит вам деньги и работает без перебоев.</p>
+                                <h4>Сдача</h4>
+                                <h5>Радуемся тому, как ваш проект приносит вам деньги и работает без перебоев.</h5>
                             </div>
                         </div>
                         <div class="how-create__cards-card">
@@ -550,8 +599,8 @@
                                 <h2>08</h2>
                             </div>
                             <div class="how-create__cards-card-text">
-                                <h3>Поддержка</h3>
-                                <p>Если нужно, анализируем результаты и помогаем с обновлениями и улучшениями.</p>
+                                <h4>Поддержка</h4>
+                                <h5>Если нужно, анализируем результаты и помогаем с обновлениями и улучшениями.</h5>
                             </div>
                         </div>
                     </div>
@@ -647,7 +696,7 @@
                         <div class="animation__words-word word-2">
                             <h2>ai</h2>
                         </div>
-                        <div class="animation__words-word word-3">
+                        <div id="word-3" class="animation__words-word word-3">
                             <h2>dev</h2>
                         </div>
                     </div>
@@ -673,6 +722,9 @@
         <div class="wrapper">
             <div class="footer__wrapper">
                 <div class="footer__country">
+                    <div class="footer__country-contacts">
+                        <h5>Наши контакты</h5>
+                    </div>
                     <div class="footer__country-item">
                         <p>Россия</p>
                         <button>Hello@devaidev.com</button>
