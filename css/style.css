@@ -174,7 +174,9 @@ li {
   transition: 0.2s linear;
 }
 .btn-white-main:hover {
-  opacity: 0.7;
+  background: var(--color-blue);
+  color: var(--color--white);
+  border-color: var(--color-blue)
 }
 
 /* Switch */
@@ -2174,7 +2176,7 @@ footer {
     padding: 0px !important;
   }
   .favorites {
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 32px 32px 0px 0px;
   }
   .favorites__wrapper {
     padding-top: 72px;
@@ -2205,7 +2207,7 @@ footer {
     margin-bottom: 16px
   }
   .all-works {
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 32px 32px 0px 0px;
     margin-top: -45px;
   }
   .all-works__wrapper {
@@ -2295,6 +2297,9 @@ footer {
   .all-trends__wrapper {
     padding-bottom: 72px
   }
+  .our-team {
+    border-radius: 32px 32px 0px 0px;
+  }
   .our-team__wrapper {
     padding-top: 72px;
   }
@@ -2317,6 +2322,9 @@ footer {
   .our-team__cards-card-text {
     max-width: 100%;
   }
+  .reviews {
+    border-radius: 32px 32px 0px 0px;
+  }
   .reviews__wrapper {
     padding-top: 64px;
     padding-bottom: 50px;
@@ -2332,6 +2340,9 @@ footer {
   }
   .reviews__slider-slide {
     padding: 24px 23px;
+  }
+  .how-create {
+    border-radius: 32px 32px 0px 0px;
   }
   .how-create__wrapper {
     padding-top: 72px;
@@ -2379,6 +2390,9 @@ footer {
   .how-create__cards > div:nth-child(5) .how-create__cards-card-text {
     max-width: 320px;
   }
+  .stack__use {
+    border-radius: 32px 32px 0px 0px;
+  }
   .stack__wrapper {
     padding-top: 72px;
     padding-bottom: 60px;
@@ -2386,39 +2400,35 @@ footer {
   .stack__title {
     margin-bottom: 40px;
   }
-  .stack__tech-js, .stack__tech-php, .stack__tech-html, .stack__tech-data, .stack__tech-design {
-    margin-bottom: 8px;
-  }
-  .stack__tech-js button, .stack__tech-php button, .stack__tech-html button, .stack__tech-data button, .stack__tech-design button {
-    margin-right: 4px;
-  }
-  .stack__tech-html button {
-    margin-bottom: 4px;
-  }
-  .stack__tech-html button:nth-child(6) {
-    margin-bottom: 0px;
-  }
-  .stack__tech-html button:nth-child(7) {
-    margin-bottom: 0px;
-  }
+  .stack__tech-js button,
+  .stack__tech-php button,
+  .stack__tech-html button,
+  .stack__tech-data button,
   .stack__tech-design button {
-    margin-bottom: 4px;
-  }
-  .use__title {
-    max-width: 330px;
-    margin-bottom: 40px;
-  }
-  .use__tech-manag, .use__tech-eff, .use__tech-code, .use__tech-design, .use__tech-neur {
-    margin-bottom: 8px;
-  }
-  .use__tech-manag button, .use__tech-eff button, .use__tech-code button, .use__tech-design button, .use__tech-neuro button {
     margin-right: 4px;
-  }
-  .use__tech-manag button {
     margin-bottom: 4px;
   }
-  .use__tech-manag button:nth-child(4) {
-    margin-bottom: 0px;
+  .stack__tech-js,
+  .stack__tech-php,
+  .stack__tech-html,
+  .stack__tech-data,
+  .stack__tech-design {
+    margin-bottom: 4px;
+  }
+  .use__tech-manag button,
+  .use__tech-eff button,
+  .use__tech-code button,
+  .use__tech-design button,
+  .use__tech-neuro button {
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+  .use__tech-manag,
+  .use__tech-eff,
+  .use__tech-code,
+  .use__tech-design,
+  .use__tech-neuro {
+    margin-bottom: 4px;
   }
   .animation {
     display: block;
@@ -2653,36 +2663,6 @@ footer {
   }
   .stack__wrapper {
     padding-top: 64px;
-  }
-  .stack__tech-js button:nth-child(1),
-  .stack__tech-js button:nth-child(2),
-  .stack__tech-js button:nth-child(3) {
-    margin-bottom: 4px;
-  }
-  .stack__tech-data button:nth-child(1),
-  .stack__tech-data button:nth-child(2) {
-    margin-bottom: 4px;
-  }
-  .use__title {
-    margin-bottom: 32px;
-  }
-  .use__tech-manag button:nth-child(2) {
-    margin-bottom: 0px;
-  }
-  .use__tech-manag button:nth-child(3) {
-    margin-bottom: 0px;
-  }
-  .use__tech-eff button:nth-child(1) {
-    margin-bottom: 4px;
-  }
-  .use__tech-eff button:nth-child(2) {
-    margin-bottom: 4px;
-  }
-  .use__tech-neuro button:nth-child(1) {
-    margin-bottom: 4px;
-  }
-  .use__tech-neuro button:nth-child(2) {
-    margin-bottom: 4px;
   }
   .sliding-button {
     margin-right: 10px;
