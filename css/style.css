@@ -271,7 +271,7 @@ nav ul li a {
   opacity: 0.7;
 }
 .header__right-nav-world:hover ~ .header__nav-right-lang {
-  max-height: 170px;
+  max-height: 230px;
   opacity: 1;
 }
 .header__right-nav-world img {
@@ -295,7 +295,7 @@ nav ul li a {
   transition: 0.3s linear;
 }
 .header__nav-right-lang:hover {
-  max-height: 170px;
+  max-height: 230px;
   opacity: 1;
 }
 .header__nav-right-lang button {
@@ -340,6 +340,7 @@ nav ul li a {
 .all-works__category-adapt {
   display: none;
 }
+
 /* Header end */
 
 /* Company dev start */
@@ -349,7 +350,6 @@ nav ul li a {
 }
 .company-dev__wrapper {
   margin-bottom: 200px;
-
 }
 .company-dev__text h1 {
   width: 85%;
@@ -362,8 +362,8 @@ nav ul li a {
   color: var(--color-black)
 }
 .company-dev__change-color {
-  position: absolute;
-  top: 115px;
+  position: fixed;
+  top: 330px;
   right: 0px;
   padding: 24px 13px;
   border: 1px solid var(--color-blue);
@@ -608,6 +608,7 @@ nav ul li a {
   font-size: 16px;
   line-height: 24px;
   cursor: pointer;
+  margin-right: 16px;
   transition: 0.2s linear;
 }
 .favorites__cards-card-button button:hover {
@@ -890,14 +891,14 @@ nav ul li a {
   margin-bottom: 16px;
 }
 .how-create__cards > div:nth-child(1) {
-  padding-right: 44px;
+  padding-right: 42px;
   margin-right: 20px;
 }
 .how-create__cards > div:nth-child(2) {
   padding-right: 33px;
 }
 .how-create__cards > div:nth-child(3) {
-  padding-right: 30px;
+  padding-right: 28px;
   margin-right: 20px;
 }
 .how-create__cards > div:nth-child(3) .how-create__cards-card-text {
@@ -1257,6 +1258,7 @@ footer {
 
   }
   nav.active {
+    overflow: scroll;
     transform: translateX(0) !important;
     opacity: 1 !important;
   }
@@ -1584,7 +1586,7 @@ footer {
     margin-bottom: 125px
   }
   .header__nav-button {
-    margin-top: 50px;
+    margin-top: 20px;
     display: block;
   }
   .header__nav-button button {
@@ -1646,6 +1648,7 @@ footer {
     padding-bottom: 90px;
   }
   .company-dev__change-color {
+    top: 360px;
     opacity: 0;
     transition: 0.5s linear;
   }
@@ -2095,7 +2098,7 @@ footer {
     margin-bottom: 61px
   }
   .company-dev__change-color {
-    top: 200px;
+    top: 325px;
     padding: 12px 13px;
   }
   .header__nav-button button {
@@ -2202,6 +2205,7 @@ footer {
   }
   .favorites__cards-card-button button {
     max-width: 288px;
+    margin-right: 0px;
   }
   .favorites__cards-card-button button:nth-child(1) {
     margin-bottom: 16px
@@ -2279,7 +2283,7 @@ footer {
     margin-bottom: 20px !important;
   }
   .all-works__category-adapt-items {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: absolute;
     top: 50px;
     max-height: 0px;
@@ -2289,10 +2293,21 @@ footer {
   .all-works__category-adapt-items.add {
     max-height: 150px;
     opacity: 1;
+    z-index: 100;
   }
   .all-works__category-adapt-items-item {
-    max-width: 140px;
+    position: relative;
+    width: 156%;
     margin-bottom: 5px;
+    z-index: 0;
+  }
+  .all-works__category-view {
+    position: relative;
+    z-index: 10;
+  }
+  .all-works__category-technical {
+    position: relative;
+    z-index: 10;
   }
   .all-trends__wrapper {
     padding-bottom: 72px
@@ -2556,7 +2571,6 @@ footer {
     width: 64px;
     height: 44px;
   }
-
   .header__nav-menu-lines {
     right: 19px;
   }
@@ -2564,7 +2578,7 @@ footer {
     margin-bottom: 40px;
   }
   .company-dev__change-color {
-    top: 80px;
+    top: 225px;
   }
   .company-dev__change-color div {
     margin-bottom: 16px;
@@ -2697,7 +2711,6 @@ footer {
   .word-2 {
     left: 109px;
   }
-
   .word-2.move-1 {
     left: 130px;
   }
@@ -2722,6 +2735,9 @@ footer {
   }
   .word-3.move-3 {
     top: 70px;
+  }
+  .all-works__category-adapt-items.add {
+    max-width: 289px;
   }
 }
 @media all and (max-width: 310px) {

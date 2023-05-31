@@ -106,7 +106,6 @@ if(windowWidth >= 491 && windowWidth <= 2000) {
     })
     buttonTech.addEventListener('click', function() {
       if(categoryTech.style.display !== 'block') {
-        console.log(true)
         categoryTech.style.display = 'block';
         categoryView.style.display = 'none';
         buttonView.classList.remove('btn-blue-main');
@@ -123,7 +122,9 @@ if(windowWidth >= 491 && windowWidth <= 2000) {
   let btnTechAdap = document.querySelector('.all-works__category-adapt-items-item:nth-child(2)')
   let categoryViewAdap = document.querySelector('.all-works__category-view');
   let categoryTechAdap = document.querySelector('.all-works__category-technical');
+  let allWorksWind = document.querySelector('.all-works');
   
+
   selectBtn.addEventListener('click', function() {
     ulMain.classList.toggle('add')
   })
@@ -143,7 +144,7 @@ if(windowWidth >= 491 && windowWidth <= 2000) {
       categoryViewAdap.style.display = 'none';
     }
   })
-}
+  }
 
 // How create
 
