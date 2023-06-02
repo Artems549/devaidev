@@ -1013,9 +1013,6 @@ nav ul li a {
 
 /* Animation start */
 
-/* .animation {
-  display: none;
-} */
 .animation__wrapper {
   min-height: 977px;
   position: relative;
@@ -1025,8 +1022,6 @@ nav ul li a {
   flex-wrap: wrap;
 }
 .animation__words-word h2 {
-  /* font-size: calc(24px + 176 * (100vw / 1300));
-  line-height: calc(58px + 210 * (100vw / 1300)); */
   font-size: 224px;
   line-height: 268px;
   font-weight: 500;
@@ -1044,7 +1039,6 @@ nav ul li a {
 .word-1 {
   position: absolute;
   left: 21px;
-  /* left: 1.5%; */
   top: 318px;
   transition: all 0.3s linear;
   z-index: 100;
@@ -1402,7 +1396,7 @@ footer {
   .favorites__wrapper {
     padding-top: 115px;
     padding-bottom: 160px;
-  }
+  } 
   .favorites__wrapper h2 {
     margin-bottom: 70px;
   }
@@ -1469,6 +1463,7 @@ footer {
   }
   .animation__wrapper  {
     min-height: 892px;
+    position: relative;
   }
   .animation__words-word h2 {
     font-size: 170px;
