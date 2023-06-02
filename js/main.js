@@ -173,50 +173,46 @@ toggleCardText();
 
 // Animation
 
-  const word1 = document.querySelector('.word-1');
-  const word2 = document.querySelector('.word-2');
-  const word3 = document.querySelector('.word-3');
-  const wordContainer = document.querySelector('.animation');
+const word1 = document.querySelector('.word-1');
+const word2 = document.querySelector('.word-2');
+const word3 = document.querySelector('.word-3');
+const wordContainer = document.querySelector('.animation__pseudo');
 
-  let wordCount = 1;
-  function mouseOverClass() {
-    if(wordCount === 1) {
-      wordCount = 2;
-      firstPart()
-      word1.removeEventListener('mouseover')
-      word2.removeEventListener('mouseover')
-      word3.removeEventListener('mouseover')
-    } else if(wordCount === 2) {
-      wordCount = 3
-      secondPart();
-    } else if(wordCount === 3) {
-      wordCount = 1;
-      thirdPart();
-    }
+let wordCount = 1;
+function mouseOverClass() {
+  if(wordCount === 1) {
+    wordCount = 2;
+    firstPart()
+  } else if(wordCount === 2) {
+    wordCount = 3
+    secondPart();
+  } else if(wordCount === 3) {
+    wordCount = 1;
+    thirdPart();
   }
-
-  function firstPart() {
-    word1.classList.add('move-1');
-    word2.classList.add('move-1');
-    word3.classList.add('move-1');
-  }
-  function secondPart() {
-    word1.classList.add('move-2');
-    word2.classList.add('move-2');
-    word3.classList.add('move-2');
-  }
-  function thirdPart() {
-    word1.classList.add('move-3');
-    word2.classList.add('move-3');
-    word3.classList.add('move-3');
-  }
-  function removeClass() {
-    word2.classList.remove('move-1', 'move-2', 'move-3');
-    word3.classList.remove('move-1', 'move-2', 'move-3');
-    word1.classList.remove('move-1', 'move-2', 'move-3');
-  }
-  wordContainer.addEventListener('mouseover', mouseOverClass)
-  wordContainer.addEventListener('mouseout', removeClass)
+}
+function firstPart() {
+  word1.classList.add('move-1');
+  word2.classList.add('move-1');
+  word3.classList.add('move-1');
+}
+function secondPart() {
+  word1.classList.add('move-2');
+  word2.classList.add('move-2');
+  word3.classList.add('move-2');
+}
+function thirdPart() {
+  word1.classList.add('move-3');
+  word2.classList.add('move-3');
+  word3.classList.add('move-3');
+}
+function removeClass() {
+  word2.classList.remove('move-1', 'move-2', 'move-3');
+  word3.classList.remove('move-1', 'move-2', 'move-3');
+  word1.classList.remove('move-1', 'move-2', 'move-3');
+}
+wordContainer.addEventListener('mouseover', mouseOverClass)
+wordContainer.addEventListener('mouseout', removeClass)
 
 // Burger menu
 
