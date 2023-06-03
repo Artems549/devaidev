@@ -57,8 +57,7 @@ $('#owl-reviews').owlCarousel({
 
 // Favorites
 
-const showMoreText = document.getElementById('favorites__cards-card-button-more');
-const expandButtons = document.querySelectorAll('#favorites__cards-card-button-more');
+const expandButtons = document.querySelectorAll('.favorites__cards-card-button-more');
 
 for (var i = 0; i < expandButtons.length; i++) {
   expandButtons[i].addEventListener('click', function () {
