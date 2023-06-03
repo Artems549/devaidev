@@ -2583,7 +2583,6 @@ footer {
     line-height: 70px;
     border-radius: 34px;
   }
-
   .word-1 {
     top: 95px;
     left: 9px;
@@ -2631,6 +2630,11 @@ footer {
   .word-3.move-3 {
     top: 60px;
 }
+}
+@media all and (max-width: 395px) {
+  .animation {
+    display: none;
+  }
 }
 @media all and (max-width: 350px) {
   .company-dev__text h1 {
@@ -2790,6 +2794,9 @@ footer {
   .animation {
     display: block;
   }
+  .animation__wrapper {
+    min-height: 232px;
+  }
   .animation__words-word h2 {
     font-size: 48px;
     line-height: 57px;
@@ -2797,47 +2804,51 @@ footer {
     border-radius: 28px;
   }
   .word-1 {
+    top: 74px;
     left: 0px;
   }
   .word-1.move-1 {
-    top: 37px;
+    top: 0px;
     left: 92px;
   }
   .word-1.move-2 {
-    top: 70px;
+    top: 40px;
     left: 0px;
   }
   .word-1.move-3 {
-    top: 144px;
+    top: 114px;
     left: 164px;
   }
   .word-2 {
+    top: 74px;
     left: 109px;
   }
   .word-2.move-1 {
+    top: 74px;
     left: 130px;
   }
   .word-2.move-2 {
-    top: 144px;
+    top: 114px;
     left: 0px;
   }
   .word-2.move-3 {
-    top: 144px;
+    top: 114px;
     left: 94px;
   }
   .word-3 {
+    top: 74px;
     left: 179px;
   }
   .word-3.move-1 {
-    top: 184px;
+    top: 148px;
     left: 130px;
   }
   .word-3.move-2 {
-    top: 144px;
-    left: 69px;
+    top: 114px;
+    left: 60px;
   }
   .word-3.move-3 {
-    top: 70px;
+    top: 40px;
   }
   .all-works__category-adapt-items.add {
     max-width: 289px;
