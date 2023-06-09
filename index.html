@@ -76,7 +76,9 @@
             <div class="wrapper">
                 <div class="company-dev__wrapper">
                     <div class="company-dev__text">
-                        <h1>Компания веб-разработки, <span>говорящая с заказчиками</span> на человеческом языке </h1>
+                        <h1>Сайт — не цель, а  <span>инструмент для получения прибыли.</span> Больше прибыли</h1>
+                        <h5>Как инвестиции в сайт поднять в х500? 1-й шаг: </h5>
+                        <button class="btn-blue-order btn-modal">Заказать консультацию</button>
                     </div>
                     <div class="company-dev__change-color">
                         <div></div>
@@ -320,6 +322,15 @@
                         <button class="btn-white-main">Туризм</button>
                     </div>
                 </div>
+                <div class="leave-request__wrapper">
+                    <div class="leave-request-text">
+                        <h2>Оставьте заявку</h2>
+                        <h5>На бесплатную консультацию</h5>
+                    </div>
+                    <div class="leave-request-button">
+                        <button class="btn-blue-order btn-modal">Заказать консультацию</button>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="our-team" id="our-team">
@@ -521,6 +532,40 @@
                 </div>
             </div>
         </section>
+        <seciton class="gifts">
+            <div class="wrapper">
+                <div class="gifts__wrapper">
+                    <div class="gifts__wrapper-title">
+                        <h2>Подарки при заказе</h2>
+                    </div>
+                    <div class="gifts__wrapper-items">
+                        <div class="gifts__wrapper-items-item">
+                            <h5>Настройка 1 рекламной кампании в Яндекс.Директ</h5>
+                        </div>
+                        <div class="gifts__wrapper-items-item">
+                            <h5>Подключение форм к CRM-системе</h5>
+                        </div>
+                        <div class="gifts__wrapper-items-item">
+                            <h5>Дизайн шапки для 1 соцсети в общем стиле</h5>
+                        </div>
+
+                        <div class="gifts__wrapper-items-item">
+                            <h5>Подключение системы аналитики к сайту</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leave-request__wrapper">
+                    <div class="leave-request-text">
+                        <h2>Оставьте заявку</h2>
+                        <h5>На бесплатную консультацию</h5>
+                    </div>
+                    <div class="leave-request-button">
+                        <button class="btn-blue-order btn-modal">Заказать консультацию</button>
+                    </div>
+                </div>
+            </div>
+        </seciton>
         <section class="how-create" id="how-create">
             <div class="wrapper">
                 <div class="how-create__wrapper">
@@ -755,6 +800,47 @@
             </div>
         </div>
     </footer>
+    <div class="overlay"></div>
+    <div class="modal">
+        <div class="">
+            <div class="modal__wrapper">
+                <div class="modal__title">
+                    <h4>Форма заявки</h4>
+                </div>
+                <div class="modal__form">
+                    <form action="#" class="modal__form-items" id="modal__form-items">
+                        <div class="modal__form-items-item">
+                            <label for="name"></label>
+                            <input type="text" id="name" name="name" placeholder="Имя">
+                        </div>
+                        <div class="modal__form-items-item">
+                            <label for="email"></label>
+                            <input type="text" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="modal__form-items-item">
+                            <label for="number"></label>
+                            <input type="text" id="number" name="number" placeholder="Телефон">
+                        </div>
+                        <div class="modal__form-items-item">
+                            <label for="desc"></label>
+                            <input id="desc" name="desc" placeholder="Описание задачи (необязательно)"></input>
+                        </div>
+                        <div class="modal__form-items-item">
+                            <button class="modal__form-items-btn btn-blue-main" type="submit">Отправить</button>
+                        </div>
+                        <div class="modal__form-items-item">
+                            <input type="checkbox" checked name="agreement" id="agreement">
+                            <label for="agreement">Я согласен с правилами обработки персональных данных</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery_carousel.js"></script>
     <script src="js/main.js"></script>
 </body>

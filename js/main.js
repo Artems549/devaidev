@@ -248,4 +248,25 @@ if(windowWidth < 321) {
   menuBtn.innerHTML = ''
 }
 
+// Open modal
 
+const buttonOpen = document.querySelectorAll('.btn-modal');
+const overlay = document.querySelector('.overlay');
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
+
+buttonOpen.forEach(function(element) {
+  element.addEventListener('click', function() {
+    modal.style.display = 'flex';
+    overlay.style.display = 'block'
+  })
+})
+modalClose.addEventListener('click', function() {
+  modal.style.display = 'none';
+  overlay.style.display = 'none'
+})
+
+overlay.addEventListener('click', function() {
+  modal.style.display = 'none';
+  overlay.style.display = 'none'
+})
