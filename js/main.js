@@ -216,7 +216,8 @@ wordContainer.addEventListener('mouseout', removeClass)
 // Burger menu
 
 const navMenu = document.getElementById('nav')
-const menuBtn = document.querySelector('.header__nav-menu-button button')
+const menuBtn = document.querySelector('.header__nav-menu')
+const menuBtnText = document.querySelector('.header__nav-menu-button button')
 const menuClose = document.querySelector('.header__nav-close');
 const menuItem = document.querySelectorAll('#nav ul li');
 const changeColor = document.querySelector('.company-dev__change-color')
@@ -245,7 +246,7 @@ menuItem.forEach(function(menuItem) {
 // Hide text in menu
 
 if(windowWidth < 321) {
-  menuBtn.innerHTML = ''
+  menuBtnText.innerHTML = ''
 }
 
 // Open modal
@@ -270,3 +271,8 @@ overlay.addEventListener('click', function() {
   modal.style.display = 'none';
   overlay.style.display = 'none'
 })
+
+// Form modal
+
+const inputName = document.querySelector('.modal__form-items-item:nth-child(1) input');
+

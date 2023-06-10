@@ -43,7 +43,7 @@
                             <h5>Spa</h5>
                         </div>
                         <div class="header__nav-button">
-                            <button class="btn-white-main">Начать проект</button>
+                            <button class="btn-white-main btn-modal">Начать проект</button>
                         </div>
                     </nav>
                     <div class="header__nav-right">
@@ -56,7 +56,7 @@
                             <button class="header__nav-right-lang-btn">🇷🇺 Русский</button>
                             <button class="header__nav-right-lang-btn">🇪🇸 Spanish</button>
                         </div>
-                        <button class="header__right-nav-start-project button-blue">Начать проект</button>
+                        <button class="header__right-nav-start-project button-blue btn-modal">Начать проект</button>
                     </div>
                     <div class="header__nav-menu">
                         <div class="header__nav-menu-button">
@@ -86,7 +86,7 @@
                         <div></div>
                         <div></div>
                     </div>
-                    <button class="header__right-nav-start-project-second button-blue">Начать проект</button>
+                    <button class="header__right-nav-start-project-second button-blue btn-modal">Начать проект</button>
                 </div>
             </div>
         </section>
@@ -759,7 +759,7 @@
                         <h2>Давайте обсудим</h2>
                     </div>
                     <div class="discussion__btn">
-                        <a href="#!" class="sliding-button">Написать нам</a>
+                        <a href="#!" class="sliding-button btn-modal">Написать нам</a>
                     </div>
                 </div>
             </div>
@@ -802,44 +802,44 @@
     </footer>
     <div class="overlay"></div>
     <div class="modal">
-        <div class="">
-            <div class="modal__wrapper">
-                <div class="modal__title">
-                    <h4>Форма заявки</h4>
-                </div>
-                <div class="modal__form">
-                    <form action="#" class="modal__form-items" id="modal__form-items">
-                        <div class="modal__form-items-item">
-                            <label for="name"></label>
-                            <input type="text" id="name" name="name" placeholder="Имя">
-                        </div>
-                        <div class="modal__form-items-item">
-                            <label for="email"></label>
-                            <input type="text" id="email" name="email" placeholder="Email">
-                        </div>
-                        <div class="modal__form-items-item">
-                            <label for="number"></label>
-                            <input type="text" id="number" name="number" placeholder="Телефон">
-                        </div>
-                        <div class="modal__form-items-item">
-                            <label for="desc"></label>
-                            <input id="desc" name="desc" placeholder="Описание задачи (необязательно)"></input>
-                        </div>
-                        <div class="modal__form-items-item">
-                            <button class="modal__form-items-btn btn-blue-main" type="submit">Отправить</button>
-                        </div>
-                        <div class="modal__form-items-item">
-                            <input type="checkbox" checked name="agreement" id="agreement">
-                            <label for="agreement">Я согласен с правилами обработки персональных данных</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal__close">
-                    <span></span>
-                    <span></span>
-                </div>
+        <div class="modal__wrapper">
+            <div class="modal__title">
+                <h4>Форма заявки</h4>
+            </div>
+            <div class="modal__form">
+                <form action="#" class="modal__form-items" id="modal__form-items">
+                    <div class="modal__form-items-item">
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Имя">
+                    </div>
+                    <div class="modal__form-items-item">
+                        <label for="email"></label>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="modal__form-items-item">
+                        <label for="number"></label>
+                        <input type="text" id="number" name="number" placeholder="Телефон">
+                    </div>
+                    <div class="modal__form-items-item">
+                        <label for="desc"></label>
+                        <!-- <input id="desc" name="desc" placeholder="Описание задачи (необязательно)"></input> -->
+                        <textarea id="desc" placeholder="Описание задачи (необязательно)"></textarea>
+                    </div>
+                    <div class="modal__form-items-item">
+                        <button class="modal__form-items-btn btn-blue-main" type="submit">Отправить</button>
+                    </div>
+                    <div class="modal__form-items-item">
+                        <input type="checkbox" checked name="agreement" id="agreement">
+                        <label for="agreement">Я согласен с правилами обработки персональных данных</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__close">
+                <span></span>
+                <span></span>
             </div>
         </div>
+
     </div>
     <script src="js/jquery_carousel.js"></script>
     <script src="js/main.js"></script>
