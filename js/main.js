@@ -272,7 +272,57 @@ overlay.addEventListener('click', function() {
   overlay.style.display = 'none'
 })
 
-// Form modal
+// Form validate
 
-const inputName = document.querySelector('.modal__form-items-item:nth-child(1) input');
+const form = document.getElementById('modal__form-items')
+const numError = document.querySelector('.form__num-error');
+const inputEmail = document.querySelector('.email')
+const emailError = document.querySelector('.form__email-error');
+const checkboxLabel = document.querySelector('.label__agreement')
+const checkboxInput = document.querySelector('.agreement')
+const emailPlace = document.querySelector('.modal__form-items-item:nth-child(2) input')
 
+
+form.addEventListener('submit', formSend)
+
+function formSend(e) {
+  e.preventDefault()
+  let error = formValidate(form);
+
+  if(error === 0) {
+
+  } else {
+    // alert('Заполните обязательные поля')
+  }
+}
+
+function formValidate(form) {
+  let error = 0;
+  let formReq = document.querySelectorAll('.req')
+  formRemoveError()
+  if(emailTest(inputEmail) === false) {
+    inputEmail.classList.add('error')
+    emailError.style.display = 'block';
+    emailPlace.classList.add('error')
+    error++;
+  } else if (checkboxInput.getAttribute("type") === "checkbox" && checkboxInput.checked === false) {
+    checkboxLabel.classList.add('error')
+    error++
+  }
+  return error;
+}
+function formAddError() {
+  input.classList.add('error');
+  emailError.style.display = 'block';
+  checkboxError.classList.add('error')
+}
+function formRemoveError() {
+  inputEmail.classList.remove('error')
+  checkboxLabel.classList.remove('error')
+  emailPlace.classList.remove('error')
+  emailError.style.display = 'none';
+}
+function emailTest(inputEmail) {
+  const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+  return EMAIL_REGEXP.test(inputEmail.value);
+}

@@ -814,11 +814,13 @@
                     </div>
                     <div class="modal__form-items-item">
                         <label for="email"></label>
-                        <input type="text" id="email" name="email" placeholder="Email">
+                        <input class="email" type="text" id="email" name="email" placeholder="Email">
+                        <p class="form__email-error">пожалуйста оставьте email для связи</p>
                     </div>
                     <div class="modal__form-items-item">
                         <label for="number"></label>
-                        <input type="text" id="number" name="number" placeholder="Телефон">
+                        <input class="" type="text" id="number" name="number" placeholder="Телефон">
+                        <p class="form__num-error">пожалуйста оставьте телефон для связи</p>
                     </div>
                     <div class="modal__form-items-item">
                         <label for="desc"></label>
@@ -829,8 +831,8 @@
                         <button class="modal__form-items-btn btn-blue-main" type="submit">Отправить</button>
                     </div>
                     <div class="modal__form-items-item">
-                        <input type="checkbox" checked name="agreement" id="agreement">
-                        <label for="agreement">Я согласен с правилами обработки персональных данных</label>
+                        <input class="agreement" checked type="checkbox" name="agreement" id="agreement">
+                        <label class="label__agreement" for="agreement">Я согласен с правилами обработки персональных данных</label>
                     </div>
                 </form>
             </div>
