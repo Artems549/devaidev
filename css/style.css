@@ -3127,7 +3127,10 @@ footer {
   }
   .word-3.move-3 {
     top: 60px;
-}
+  }
+  .gifts__wrapper-title {
+    width: 65%;
+  }
 }
 @media all and (max-width: 395px) {
   .animation {
