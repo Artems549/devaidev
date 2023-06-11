@@ -810,11 +810,12 @@
                 <form action="#" class="modal__form-items" id="modal__form-items">
                     <div class="modal__form-items-item">
                         <label for="name"></label>
-                        <input type="text" id="name" name="name" placeholder="Имя">
+                        <input class="req name" type="text" id="name" name="name" placeholder="Имя">
+                        <p class="form__name-error">пожалуйста введите имя</p>
                     </div>
                     <div class="modal__form-items-item">
                         <label for="email"></label>
-                        <input class="email" type="text" id="email" name="email" placeholder="Email">
+                        <input class="req email" type="text" id="email" name="email" placeholder="Email">
                         <p class="form__email-error">пожалуйста оставьте email для связи</p>
                     </div>
                     <div class="modal__form-items-item">
@@ -830,7 +831,7 @@
                         <button class="modal__form-items-btn btn-blue-main" type="submit">Отправить</button>
                     </div>
                     <div class="modal__form-items-item">
-                        <input class="agreement" checked type="checkbox" name="agreement" id="agreement">
+                        <input class="req agreement" type="checkbox" name="agreement" id="agreement">
                         <label class="label__agreement" for="agreement">Я согласен с правилами обработки персональных данных</label>
                     </div>
                 </form>

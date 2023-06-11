@@ -416,7 +416,7 @@ nav ul li a {
   position: fixed;
   top: 330px;
   right: 0px;
-  padding: 40px 13px;
+  padding: 24px 13px;
   border: 1px solid var(--color-blue);
   background-color: var(--color--white);
   border-radius: 90px;
@@ -426,7 +426,7 @@ nav ul li a {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 6px;
   cursor: pointer;
   transition: 0.1s linear;
 }
@@ -486,7 +486,7 @@ nav ul li a {
 .decision__cards-up-card:nth-child(2) img {
   max-width: 100%;
   border-radius: 32px;
-  object-fit: none;
+  object-fit: cover;
 }
 .decision__cards-down {
   display: flex;
@@ -1489,6 +1489,7 @@ footer {
   transform: rotate(45deg);
   top: 11px;
 }
+.form__name-error,
 .form__email-error,
 .form__num-error {
   font-size: 14px;
@@ -1501,6 +1502,12 @@ footer {
 .form__email-error {
   display: none;
 }
+.form__name-error {
+  display: none;
+}
+.modal__form-items-item:nth-child(1) input.error {
+  border-color: var(--color-red);
+}
 .modal__form-items-item:nth-child(2) input.error {
   border-color: var(--color-red);
 }
@@ -1510,8 +1517,11 @@ footer {
 .label__agreement.error {
   color: var(--color-red)
 }
+.modal__form-items-item:nth-child(1) input.error::placeholder {
+  color: var(--color-red);
+}
 .modal__form-items-item:nth-child(2) input.error::placeholder {
-  color: red;
+  color: var(--color-red);
 }
 
 /* Modal end */
@@ -1806,6 +1816,10 @@ footer {
   }
 }
 @media all and (max-width: 1080px) {
+  .wrapper {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
   .animation {
     display: none;
   }
@@ -1951,9 +1965,13 @@ footer {
     padding-bottom: 90px;
   }
   .company-dev__change-color {
+    padding: 40px 13px;
     top: 300px;
     opacity: 0;
     transition: 0.5s linear;
+  }
+  .company-dev__change-color div {
+    margin-bottom: 30px;
   }
   .decision__cards-up-card,
   .decision__cards-down-right-card {
@@ -2340,7 +2358,7 @@ footer {
     line-height: 34px;
   }
   .company-dev__change-color {
-    top: 340px;
+    top: 170px;
   }
   .our-team__cards-card-last h3 {
     font-size: 40px;
@@ -2399,9 +2417,6 @@ footer {
     font-size: 32px;
     line-height: 41px;
   }
-  .wrapper {
-    /* max-width: 456px; */
-  }
   .switch {
     width: 57px;
     height: 32px;
@@ -2459,7 +2474,7 @@ footer {
     margin-bottom: 20px
   }
   .company-dev__change-color {
-    top: 280px;
+    top: 170px;
   }
   nav.active {
     overflow: scroll;
@@ -2938,9 +2953,6 @@ footer {
   .animation {
     display: none;
   }
-  .wrapper {
-    /* max-width: 400px; */
-  }
   .company-dev__text h1 {
     font-size: 50px;
     line-height: 58px;;
@@ -3036,9 +3048,6 @@ footer {
     font-size: 32px;
     line-height: 38px;
   }
-  .wrapper {
-    /* max-width: 288px; */
-  }
   .btn-blue-order {
     padding: 10px 20px;
   }
@@ -3068,9 +3077,6 @@ footer {
   }
   .company-dev__change-color {
     top: 160px;
-  }
-  .company-dev__change-color div {
-
   }
   .header__wrapper {
     margin-bottom: 100px;
@@ -3237,6 +3243,10 @@ footer {
   }
   .leave-request__wrapper {
     padding: 30px;
+  }
+  .header__nav-button button {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 @media all and (max-width: 310px) {

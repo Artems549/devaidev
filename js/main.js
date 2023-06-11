@@ -275,23 +275,24 @@ overlay.addEventListener('click', function() {
 // Form validate
 
 const form = document.getElementById('modal__form-items')
-const numError = document.querySelector('.form__num-error');
-const inputEmail = document.querySelector('.email')
+const nameError = document.querySelector('.form__name-error');
+const namePlace = document.querySelector('.modal__form-items-item:nth-child(1) input')
 const emailError = document.querySelector('.form__email-error');
-const checkboxLabel = document.querySelector('.label__agreement')
-const checkboxInput = document.querySelector('.agreement')
 const emailPlace = document.querySelector('.modal__form-items-item:nth-child(2) input')
-
+const checkboxLabel = document.querySelector('.label__agreement');
+const checkboxInput = document.querySelector('.agreement');
 
 form.addEventListener('submit', formSend)
 
 function formSend(e) {
   e.preventDefault()
-  let error = formValidate(form);
+  let errorValidate = formValidate(form);
 
-  if(error === 0) {
+  if(errorValidate === 0) {
+    console.log(true)
 
   } else {
+    console.log(false)
     // alert('Заполните обязательные поля')
   }
 }
@@ -300,29 +301,38 @@ function formValidate(form) {
   let error = 0;
   let formReq = document.querySelectorAll('.req')
   formRemoveError()
-  if(emailTest(inputEmail) === false) {
-    inputEmail.classList.add('error')
-    emailError.style.display = 'block';
-    emailPlace.classList.add('error')
-    error++;
-  } else if (checkboxInput.getAttribute("type") === "checkbox" && checkboxInput.checked === false) {
-    checkboxLabel.classList.add('error')
-    error++
+  for(let i = 0; i < formReq.length; i++) {
+    let input = formReq[i];
+
+    if(input.classList.contains('name') && input.value === '') {
+      namePlace.classList.add('error');
+      nameError.style.display = 'block';
+      error++
+    } else if(input.classList.contains('email')) {
+        if(emailTest(input) === false) {
+          emailPlace.classList.add('error');
+          emailError.style.display = 'block';
+          error++;
+      } else if (input.classList.contains('agreement')) {
+        console.log('yes')
+        if(input.checked === false) {
+          checkboxLabel.classList.add('error');
+          error++;
+        }
+
+      }
+    }
   }
   return error;
 }
-function formAddError() {
-  input.classList.add('error');
-  emailError.style.display = 'block';
-  checkboxError.classList.add('error')
-}
 function formRemoveError() {
-  inputEmail.classList.remove('error')
   checkboxLabel.classList.remove('error')
   emailPlace.classList.remove('error')
+  namePlace.classList.remove('error');
   emailError.style.display = 'none';
+  nameError.style.display = 'none';
 }
-function emailTest(inputEmail) {
+function emailTest(input) {
   const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-  return EMAIL_REGEXP.test(inputEmail.value);
+  return EMAIL_REGEXP.test(input.value);
 }
