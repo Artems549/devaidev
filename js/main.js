@@ -14,11 +14,14 @@ linksGet.forEach(link => {
   });
 });
 
+// Works carousel
+
 $('#owl-works').owlCarousel({
     loop: true,
     dots: false,
     items: 3,
     margin: 10,
+    nav: true,
     responsive:{
       0:{
           items:1
@@ -34,11 +37,17 @@ $('#owl-works').owlCarousel({
       }
     }
 });
+document.querySelector('.all-works__slider .owl-nav .owl-prev span').innerHTML = ''
+document.querySelector('.all-works__slider .owl-nav .owl-next span').innerHTML = ''
+
+// Reviews carousel
+
 $('#owl-reviews').owlCarousel({
     loop: true,
     dots: false,
     items: 3,
     margin: 20,
+    nav: true,
     responsive:{
       0:{
           items:1
@@ -54,6 +63,8 @@ $('#owl-reviews').owlCarousel({
       }
     }
 });
+document.querySelector('.reviews__slider .owl-nav .owl-prev span').innerHTML = ''
+document.querySelector('.reviews__slider .owl-nav .owl-next span').innerHTML = ''
 
 // Favorites
 
@@ -87,7 +98,7 @@ function copyLink(button) {
 
 // All works
 let windowWidth = window.innerWidth;
-if(windowWidth >= 491 && windowWidth <= 2000) {
+if(windowWidth >= 491 && windowWidth <= 5000) {
   document.addEventListener('DOMContentLoaded', function() {
     const buttonView = document.querySelector('.all-works__category-view-btn');
     const buttonTech = document.querySelector('.all-works__category-tech-btn');
@@ -287,13 +298,12 @@ form.addEventListener('submit', formSend)
 function formSend(e) {
   e.preventDefault()
   let errorValidate = formValidate(form);
+  let formData = new FormData(form)
 
   if(errorValidate === 0) {
     console.log(true)
-
   } else {
     console.log(false)
-    // alert('Заполните обязательные поля')
   }
 }
 
@@ -301,27 +311,21 @@ function formValidate(form) {
   let error = 0;
   let formReq = document.querySelectorAll('.req')
   formRemoveError()
+
   for(let i = 0; i < formReq.length; i++) {
     let input = formReq[i];
-
     if(input.classList.contains('name') && input.value === '') {
       namePlace.classList.add('error');
       nameError.style.display = 'block';
       error++
-    } else if(input.classList.contains('email')) {
-        if(emailTest(input) === false) {
-          emailPlace.classList.add('error');
-          emailError.style.display = 'block';
-          error++;
-      } else if (input.classList.contains('agreement')) {
-        console.log('yes')
-        if(input.checked === false) {
+    } else if(input.classList.contains('email') && emailTest(input) === false) {
+        emailPlace.classList.add('error');
+        emailError.style.display = 'block';
+        error++;
+      } else if (input.classList.contains('agreement') && input.checked === false) {
           checkboxLabel.classList.add('error');
           error++;
         }
-
-      }
-    }
   }
   return error;
 }
