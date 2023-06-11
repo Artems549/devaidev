@@ -1433,6 +1433,13 @@ footer {
   outline: none;
   border-width: 2px;
 }
+.modal__form-items-item:nth-child(1) input:focus::placeholder,
+.modal__form-items-item:nth-child(2) input:focus::placeholder,
+.modal__form-items-item:nth-child(3) input:focus::placeholder,
+.modal__form-items-item:nth-child(4) textarea:focus::placeholder {
+  font-size: 12px;
+  transform: translateY(-16px);
+}
 .modal__form-items-item:nth-child(1) input:focus-visible,
 .modal__form-items-item:nth-child(2) input:focus-visible,
 .modal__form-items-item:nth-child(3) input:focus-visible,
