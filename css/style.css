@@ -2435,6 +2435,9 @@ footer {
   .reviews__slider .owl-nav .owl-next span:before {
     right: 10%;
   }
+  .company-dev__wrapper {
+    margin-bottom: 100px;
+  }
 }
 @media all and (max-width: 740px) {
   .animation {
@@ -3054,6 +3057,9 @@ footer {
   .reviews__slider .owl-nav .owl-prev span:before,
   .reviews__slider .owl-nav .owl-next span:before {
     top: 95%;
+  }
+  .company-dev__wrapper {
+    margin-bottom: 50px;
   }
 }
 @media all and (max-width: 470px) {
