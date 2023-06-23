@@ -14,23 +14,61 @@ linksGet.forEach(link => {
   });
 });
 
+// Works carousel
+
 $('#owl-works').owlCarousel({
     loop: true,
     dots: false,
     items: 3,
     margin: 10,
+    nav: true,
+    responsive:{
+      0:{
+          items:1
+      },
+      420:{
+        items:2,
+      },
+      768:{
+          items:2
+      },
+      960:{
+        items:3,
+      }
+    }
 });
+document.querySelector('.all-works__slider .owl-nav .owl-prev span').innerHTML = ''
+document.querySelector('.all-works__slider .owl-nav .owl-next span').innerHTML = ''
+
+// Reviews carousel
+
 $('#owl-reviews').owlCarousel({
     loop: true,
     dots: false,
     items: 3,
     margin: 20,
+    nav: true,
+    responsive:{
+      0:{
+          items:1
+      },
+      420:{
+        items:2,
+      },
+      768:{
+          items:2
+      },
+      960:{
+        items: 3,
+      }
+    }
 });
+document.querySelector('.reviews__slider .owl-nav .owl-prev span').innerHTML = ''
+document.querySelector('.reviews__slider .owl-nav .owl-next span').innerHTML = ''
 
 // Favorites
 
-const showMoreText = document.getElementById('favorites__cards-card-button-more');
-const expandButtons = document.querySelectorAll('#favorites__cards-card-button-more');
+const expandButtons = document.querySelectorAll('.favorites__cards-card-button-more');
 
 for (var i = 0; i < expandButtons.length; i++) {
   expandButtons[i].addEventListener('click', function () {
@@ -59,40 +97,67 @@ function copyLink(button) {
 }
 
 // All works
+let windowWidth = window.innerWidth;
+if(windowWidth >= 491 && windowWidth <= 5000) {
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttonView = document.querySelector('.all-works__category-view-btn');
+    const buttonTech = document.querySelector('.all-works__category-tech-btn');
+    const categoryView = document.querySelector('.all-works__category-view');
+    const categoryTech = document.querySelector('.all-works__category-technical');
+    buttonView.addEventListener('click', function() {
+      if(categoryView.style.display !== 'block') {
+        categoryView.style.display = 'block';
+        categoryTech.style.display = 'none';
+        buttonView.classList.remove('btn-white-main');
+        buttonView.classList.add('btn-blue-main');
+        buttonTech.classList.remove('btn-blue-main');
+        buttonTech.classList.add('btn-white-main')
+      }
+    })
+    buttonTech.addEventListener('click', function() {
+      if(categoryTech.style.display !== 'block') {
+        categoryTech.style.display = 'block';
+        categoryView.style.display = 'none';
+        buttonView.classList.remove('btn-blue-main');
+        buttonView.classList.add('btn-white-main');
+        buttonTech.classList.remove('btn-white-main')
+        buttonTech.classList.add('btn-blue-main')
+      }
+    })
+  });
+} else {
+  let selectBtn = document.querySelector('.all-works__category-adapt-btn');
+  let ulMain = document.querySelector('.all-works__category-adapt-items');
+  let btnViewAdap = document.querySelector('.all-works__category-adapt-items-item:nth-child(1)')
+  let btnTechAdap = document.querySelector('.all-works__category-adapt-items-item:nth-child(2)')
+  let categoryViewAdap = document.querySelector('.all-works__category-view');
+  let categoryTechAdap = document.querySelector('.all-works__category-technical');
+  let allWorksWind = document.querySelector('.all-works');
+  
 
-document.addEventListener('DOMContentLoaded', function() {
-  const buttonView = document.querySelector('.all-works__category-view-btn');
-  const buttonTech = document.querySelector('.all-works__category-tech-btn');
-  const categoryView = document.querySelector('.all-works__category-view');
-  const categoryTech = document.querySelector('.all-works__category-technical');
-
-
-  buttonView.addEventListener('click', function() {
-    if(categoryView.style.display !== 'block') {
-      categoryView.style.display = 'block';
-      categoryTech.style.display = 'none';
-      buttonView.classList.remove('btn-white-main');
-      buttonView.classList.add('btn-blue-main');
-      buttonTech.classList.remove('btn-blue-main');
-      buttonTech.classList.add('btn-white-main')
+  selectBtn.addEventListener('click', function() {
+    ulMain.classList.toggle('add')
+  })
+  btnViewAdap.addEventListener('click', function() {
+    ulMain.classList.remove('add')
+    selectBtn.innerHTML = 'По видам работ';
+    if(categoryViewAdap.style.display !== 'block') {
+      categoryTechAdap.style.display = 'none';
+      categoryViewAdap.style.display = 'block';
     }
   })
-  buttonTech.addEventListener('click', function() {
-    if(categoryTech.style.display !== 'block') {
-      console.log(true)
-      categoryTech.style.display = 'block';
-      categoryView.style.display = 'none';
-      buttonView.classList.remove('btn-blue-main');
-      buttonView.classList.add('btn-white-main');
-      buttonTech.classList.remove('btn-white-main')
-      buttonTech.classList.add('btn-blue-main')
+  btnTechAdap.addEventListener('click', function() {
+    ulMain.classList.remove('add')
+    selectBtn.innerHTML = 'По техническому';
+    if(categoryTechAdap.style.display !== 'block') {
+      categoryTechAdap.style.display = 'block';
+      categoryViewAdap.style.display = 'none';
     }
   })
-});
-
-
+  }
 
 // How create
+
 const switchInput = document.getElementById('how-create__switch');
 const cardTextBlocks = document.querySelectorAll('.how-create__cards-card-text');
 const easyWord = document.getElementById('how-create__title-just');
@@ -118,52 +183,160 @@ toggleCardText();
 
 // Animation
 
-document.addEventListener('DOMContentLoaded', function() {
-  const word1 = document.querySelector('.word-1');
-  const word2 = document.querySelector('.word-2');
-  const word3 = document.querySelector('.word-3')
-  word1.style.zInex = 
+const word1 = document.querySelector('.word-1');
+const word2 = document.querySelector('.word-2');
+const word3 = document.querySelector('.word-3');
+const wordContainer = document.querySelector('.animation__pseudo');
 
-  word1.addEventListener('mouseover', function() {
-    word1.classList.add('move-2');
-    word2.classList.add('move-2');
-    word3.classList.add('move-2');
-    word2.removeEventListener('mouseover');
-    word3.removeEventListener('mouseover');
+let wordCount = 1;
+function mouseOverClass() {
+  if(wordCount === 1) {
+    wordCount = 2;
+    firstPart()
+  } else if(wordCount === 2) {
+    wordCount = 3
+    secondPart();
+  } else if(wordCount === 3) {
+    wordCount = 1;
+    thirdPart();
+  }
+}
+function firstPart() {
+  word1.classList.add('move-1');
+  word2.classList.add('move-1');
+  word3.classList.add('move-1');
+}
+function secondPart() {
+  word1.classList.add('move-2');
+  word2.classList.add('move-2');
+  word3.classList.add('move-2');
+}
+function thirdPart() {
+  word1.classList.add('move-3');
+  word2.classList.add('move-3');
+  word3.classList.add('move-3');
+}
+function removeClass() {
+  word2.classList.remove('move-1', 'move-2', 'move-3');
+  word3.classList.remove('move-1', 'move-2', 'move-3');
+  word1.classList.remove('move-1', 'move-2', 'move-3');
+}
+wordContainer.addEventListener('mouseover', mouseOverClass)
+wordContainer.addEventListener('mouseout', removeClass)
+
+// Burger menu
+
+const navMenu = document.getElementById('nav')
+const menuBtn = document.querySelector('.header__nav-menu')
+const menuBtnText = document.querySelector('.header__nav-menu-button button')
+const menuClose = document.querySelector('.header__nav-close');
+const menuItem = document.querySelectorAll('#nav ul li');
+const changeColor = document.querySelector('.company-dev__change-color')
+
+
+menuBtn.addEventListener('click', function() {
+  if(navMenu.style.opacity !== 1) {
+    navMenu.classList.add('active');
+    changeColor.style.opacity = 1;
+  }
+})
+menuClose.addEventListener('click', function() {
+  if(navMenu.style.opacity !== 0) {
+    navMenu.classList.remove('active')
+    changeColor.style.opacity = 0;
+  }
+})
+menuItem.forEach(function(menuItem) {
+  menuItem.addEventListener('click', function() {
+    navMenu.classList.remove('active')
+    changeColor.style.opacity = 0;
   })
-  word1.addEventListener('mouseout', function() {
-    word1.classList.remove('move-2');
-    word2.classList.remove('move-2');
-    word3.classList.remove('move-2');
+})
+
+
+// Hide text in menu
+
+if(windowWidth < 321) {
+  menuBtnText.innerHTML = ''
+}
+
+// Open modal
+
+const buttonOpen = document.querySelectorAll('.btn-modal');
+const overlay = document.querySelector('.overlay');
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
+
+buttonOpen.forEach(function(element) {
+  element.addEventListener('click', function() {
+    modal.style.display = 'flex';
+    overlay.style.display = 'block'
   })
+})
+modalClose.addEventListener('click', function() {
+  modal.style.display = 'none';
+  overlay.style.display = 'none'
+})
 
-  word2.addEventListener('mouseover', function() {
-      word1.classList.add('move-1');
-      word2.classList.add('move-1');
-      word3.classList.add('move-1');
-      word1.removeEventListener('mouseover');
-      word3.removeEventListener('mouseover');
-  });
-  word2.addEventListener('mouseout', function() {
-      word1.classList.remove('move-1');
-      word2.classList.remove('move-1');
-      word3.classList.remove('move-1');
-  });
+overlay.addEventListener('click', function() {
+  modal.style.display = 'none';
+  overlay.style.display = 'none'
+})
 
-  word3.addEventListener('mouseover', function() {
-      word1.classList.add('move-3');
-      word2.classList.add('move-3');
-      word3.classList.add('move-3');
-      word1.removeEventListener('mouseover');
-      word3.removeEventListener('mouseover');
-  })
-  word3.addEventListener('mouseout', function() {
-    word1.classList.remove('move-3');
-    word2.classList.remove('move-3');
-    word3.classList.remove('move-3');
-  })
+// Form validate
 
+const form = document.getElementById('modal__form-items')
+const nameError = document.querySelector('.form__name-error');
+const namePlace = document.querySelector('.modal__form-items-item:nth-child(1) input')
+const emailError = document.querySelector('.form__email-error');
+const emailPlace = document.querySelector('.modal__form-items-item:nth-child(2) input')
+const checkboxLabel = document.querySelector('.label__agreement');
+const checkboxInput = document.querySelector('.agreement');
 
-  
-});
+form.addEventListener('submit', formSend)
 
+function formSend(e) {
+  e.preventDefault()
+  let errorValidate = formValidate(form);
+  let formData = new FormData(form)
+
+  if(errorValidate === 0) {
+    console.log(true)
+  } else {
+    console.log(false)
+  }
+}
+
+function formValidate(form) {
+  let error = 0;
+  let formReq = document.querySelectorAll('.req')
+  formRemoveError()
+
+  for(let i = 0; i < formReq.length; i++) {
+    let input = formReq[i];
+    if(input.classList.contains('name') && input.value === '') {
+      namePlace.classList.add('error');
+      nameError.style.display = 'block';
+      error++
+    } else if(input.classList.contains('email') && emailTest(input) === false) {
+        emailPlace.classList.add('error');
+        emailError.style.display = 'block';
+        error++;
+      } else if (input.classList.contains('agreement') && input.checked === false) {
+          checkboxLabel.classList.add('error');
+          error++;
+        }
+  }
+  return error;
+}
+function formRemoveError() {
+  checkboxLabel.classList.remove('error')
+  emailPlace.classList.remove('error')
+  namePlace.classList.remove('error');
+  emailError.style.display = 'none';
+  nameError.style.display = 'none';
+}
+function emailTest(input) {
+  const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+  return EMAIL_REGEXP.test(input.value);
+}
