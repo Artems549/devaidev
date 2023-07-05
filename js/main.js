@@ -18,14 +18,16 @@ linksGet.forEach(link => {
 
 console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
 
-const { countries, zones } = require("moment-timezone/data/meta/latest.json");
-const timeZoneToCountry = {};
+fetch('../node_modules/moment-timezone/data/meta/latest.json')
+.then(response => response.json())
+.then(data => {
 
-Object.keys(zones).forEach(z => {
-  timeZoneToCountry[z] = countries[zones[z].countries[0]].name;
-});
 
-console.log(JSON.stringify(timeZoneToCountry, null, 2))
+})
+
+
+
+
 
 
 
