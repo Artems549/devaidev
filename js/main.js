@@ -33,9 +33,7 @@ if(Intl) {
   userRegion = tzArr[0];
   userCity = tzArr[tzArr.length - 1];
   userCountry = data[userCity];
-  if(userCountry === 'Georgia') {
-    console.log('Your country in Georgia')
-  }
+  console.log('Country: ' + userCountry)
 }
 })
 
