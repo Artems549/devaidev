@@ -18,7 +18,7 @@ linksGet.forEach(link => {
 
 console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
 
-fetch('../json/tz-cities-to-countries.json')
+fetch('./json/tz-cities-to-countries.json')
 .then(response => response.json())
 .then(data => {
 
@@ -33,10 +33,10 @@ if(Intl) {
   userRegion = tzArr[0];
   userCity = tzArr[tzArr.length - 1];
   userCountry = data[userCity];
+  if(userCountry === 'Georgia') {
+    console.log('Your country in Georgia')
+  }
 }
-console.log('Country: ' + userCountry)
-
-
 })
 
 
