@@ -14,6 +14,21 @@ linksGet.forEach(link => {
   });
 });
 
+// Location
+
+console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
+
+const { countries, zones } = require("moment-timezone/data/meta/latest.json");
+const timeZoneToCountry = {};
+
+Object.keys(zones).forEach(z => {
+  timeZoneToCountry[z] = countries[zones[z].countries[0]].name;
+});
+
+console.log(JSON.stringify(timeZoneToCountry, null, 2))
+
+
+
 // Works carousel
 
 $('#owl-works').owlCarousel({
