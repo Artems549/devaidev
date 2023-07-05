@@ -16,21 +16,16 @@ linksGet.forEach(link => {
 
 // Location
 
-console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
-
 fetch('./json/tz-cities-to-countries.json')
 .then(response => response.json())
 .then(data => {
 
-var userRegion;
-var userCity;
 var userCountry;
 var userTimeZone;
 
 if(Intl) {
   userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   var tzArr = userTimeZone.split('/');
-  userRegion = tzArr[0];
   userCity = tzArr[tzArr.length - 1];
   userCountry = data[userCity];
   console.log('Country: ' + userCountry)
