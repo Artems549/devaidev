@@ -28,7 +28,7 @@ if(Intl) {
   var tzArr = userTimeZone.split('/');
   userCity = tzArr[tzArr.length - 1];
   userCountry = data[userCity];
-  console.log('Country: ' + userCountry)
+  // console.log('Country: ' + userCountry)
 }
 })
 
