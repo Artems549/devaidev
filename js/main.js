@@ -87,8 +87,17 @@ $('#owl-reviews').owlCarousel({
       }
     }
 });
-document.querySelector('.reviews__slider .owl-nav .owl-prev span').innerHTML = ''
-document.querySelector('.reviews__slider .owl-nav .owl-next span').innerHTML = ''
+
+// Setting navigation arrow
+
+const owlButtonPrev = document.querySelectorAll('.owl-carousel .owl-nav button:nth-child(1)');
+const owlButtonNext = document.querySelectorAll('.owl-carousel .owl-nav button:nth-child(2)');
+for(let i = 0; i < owlButtonPrev.length; i++) {
+  owlButtonPrev[i].innerHTML = "Назад";
+  owlButtonPrev[i].className = "btn-white-main";
+  owlButtonNext[i].innerHTML = "Вперед";
+  owlButtonNext[i].className = "btn-white-main"
+}
 
 // Favorites
 
