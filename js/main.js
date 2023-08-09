@@ -90,18 +90,6 @@ for(let i = 0; i < owlButtonPrev.length; i++) {
   owlButtonNext[i].innerHTML = "Вперед";
   owlButtonNext[i].className = "btn-white-main"
 }
-for(let i = 0; i < owlButtonPrev.length; i++) {
-  owlButtonPrev[i].addEventListener('touchstart', function(event) {
-    if(event.touches.length > 1) {
-      event.preventDefault()
-    }
-  })
-  owlButtonNext[i].addEventListener('touchstart', function(event) {
-    if(event.touches.length > 1) {
-      event.preventDefault()
-    }
-  })
-}
 
 // Favorites
 
